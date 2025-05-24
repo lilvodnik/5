@@ -16,7 +16,7 @@ const TASKS_FILE = path.join(__dirname, 'tasks.json');
 
 // Инициализация файлов
 if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]');
-if (!fs.existsSync(TASKS_FILE)) fs.writeFileSync(TASKS_FILE, '[]');
+if (!fs.existsSync(TASKS_FILE)) fs.writeFileSync(TASKS_FILE, '{}');
 
 // Функция для проверки JWT
 function authenticateToken(req, res, next) {
