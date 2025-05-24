@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Менеджер задач</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Менеджер задач</h1>
+      <div id="auth-section">
+        <button id="auth-btn">Вход</button>
+      </div>
+    </header>
+
+    <main>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Название задачи" required>
+        <input type="datetime-local" id="task-deadline">
+        <select id="task-category">
+          <option value="new">Новая</option>
+          <option value="in-progress">В работе</option>
+          <option value="completed">Завершена</option>
+        </select>
+        <button type="submit">Добавить</button>
+      </form>
+
+      <div class="filters">
+        <select id="filter-category">
+          <option value="all">Все задачи</option>
+          <option value="new">Новые</option>
+          <option value="in-progress">В работе</option>
+          <option value="completed">Завершенные</option>
+          <option value="overdue">Просроченные</option>
+        </select>
+      </div>
+
+      <ul id="task-list">
+        <li class="empty">Загрузка задач...</li>
+      </ul>
+    </main>
+  </div>
+
+  <script src="/js/tasks.js"></script>
+</body>
+</html>
